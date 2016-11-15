@@ -13,7 +13,17 @@
         @endunless
         </title>
 
-
+        <style type="text/css">
+        .highlight {
+            color: green !important;
+        }
+        .highlight-red {
+            color: red !important;
+        }
+        .float-right{
+            float:right;
+        }
+        </style>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- <link rel="stylesheet" href="{{ elixir('css/app.css') }}"> -->
@@ -22,10 +32,12 @@
     </head>
     <body>
         <div class="container">
+            <hr>
             @yield('content')
+            <hr>
             <div class="row">
                 @yield('footer')
-                <div class="col-md-6 col-md-offset-3"><a href="/">BACK HOME</a></div>
+                <div class="col-md-6 col-md-offset-3"><a class="highlight" href="/">BACK HOME</a></div>
             </div>
         </div>
     </body>

@@ -43,9 +43,40 @@ Route::get('oops', 'OopsController@features');
 
 Route::get('about', 'custom\AboutController@home');
 
-/*** Cards Routes - Start ***/
+/************************ Cards Routes - Start **************************/
+// show all cards
 Route::get('cards', 'custom\CardsController@index');
+
+// show specific card
 Route::get('cards/{card}', 'custom\CardsController@show');
+
+// add card
+Route::get('card/add', 'custom\CardsController@add');
+
+// save added card
+Route::post('card/store', 'custom\CardsController@store');
+
+// update added card form
+Route::get('card/{card}/edit', 'custom\CardsController@edit');
+
+// update added card
+Route::patch('card/{card}', 'custom\CardsController@update');
+
+// delete added card
+Route::get('card/{card}/delete', 'custom\CardsController@delete');
+/************************ Cards Routes - End **************************/
+
+
+/************************ Notes Routes - Start **************************/
 // Add note form
 Route::post('cards/{card}/notes', 'custom\NotesController@store');
-/*** Cards Routes - End ***/
+
+// Edit note
+Route::get('notes/{note}/edit', 'custom\NotesController@edit');
+
+// Update note
+Route::patch('notes/{note}', 'custom\NotesController@update');
+
+Route::get('notes/{note}/delete', 'custom\NotesController@delete');
+
+/************************ Notes Routes - End **************************/
