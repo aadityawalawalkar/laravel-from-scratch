@@ -46,5 +46,6 @@ Route::get('about', 'custom\AboutController@home');
 /*** Cards Routes - Start ***/
 Route::get('cards', 'custom\CardsController@index');
 Route::get('cards/{card}', 'custom\CardsController@show');
+// Add note form
 Route::post('cards/{card}/notes', 'custom\NotesController@store');
 /*** Cards Routes - End ***/
